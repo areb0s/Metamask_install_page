@@ -58,7 +58,7 @@
 
 <TailwindCss />
 <main class="container grid my-16 mx-auto place-content-center">
-	<div class="grid border-solid border-2 rounded-lg p-5 bg-white">
+	<div class="grid border-solid border-2 rounded-lg pb-20 p-5 bg-white">
 		<img class="h-52 mx-auto" src={metamask} alt="Metamask Logo" />
 		<p class="mx-auto text-xl font-bold">
 			쥬라리움NFT 메타마스크 설치 안내
