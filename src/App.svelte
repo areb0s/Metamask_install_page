@@ -73,11 +73,11 @@
 		<p>모바일 OS에 맞는 버튼을 클릭해 설치해주세요.</p>
 		<div class="my-3 mx-auto">
 			<button
-				class="border-solid border-2 rounded-lg p-1 w-24"
+				class="border-solid border-2 rounded-lg py-5 px-7 mr-5 w-32"
 				on:click={goGooglePlay}>Android</button
 			>
 			<button
-				class="border-solid border-2 rounded-lg p-1 w-24"
+				class="border-solid border-2 rounded-lg py-5 px-7 w-32"
 				on:click={goAppstore}>iOS</button
 			>
 		</div>
@@ -96,7 +96,7 @@
 			2. Metamask 브라우저에서 사이트 접속
 		</p>
 		<button
-			class="my-3 mx-auto border-solid border-2 rounded-lg p-1 w-24 text-sky-600"
+			class="my-3 mx-auto border-solid border-2 rounded-lg py-5 px-7 w-40 text-sky-600"
 			on:click={copylink}>링크 복사</button
 		>
 		<p>위 버튼을 클릭해 링크 복사 후,</p>
@@ -119,12 +119,12 @@
 			>
 			{#if !walletState}
 				<button
-					class="my-3 mx-auto border-solid border-2 rounded-lg p-1 w-24"
+					class="my-3 mx-auto border-solid border-2 rounded-lg py-5 px-7 w-40"
 					on:click={connnectWallet}>지갑 연결</button
 				>
 			{:else}
 				<button
-					class="my-3 mx-auto border-solid border-2 rounded-lg p-1 w-44"
+					class="my-3 mx-auto border-solid border-2 rounded-lg py-5 px-7 w-50"
 					on:click={addKlaytnChain}>Klaytn Network 추가</button
 				>
 			{/if}
