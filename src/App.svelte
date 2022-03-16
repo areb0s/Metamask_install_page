@@ -135,19 +135,21 @@
 			<p class="text-rose-600">2단계를 잘 진행했는지 확인해주세요!</p>
 		{:else}
 			<p class="mb-3 mx-auto text-xl font-bold">
-				<del>1. Metamask 지갑 설치</del> 완료
+				<del>1. Metamask 지갑 설치</del>
 			</p>
 			<hr
 				class="my-20 mx-auto border-solid border-black border-1 w-[50px]"
 			/>
 			<p class="mx-auto text-xl font-bold">
-				<del>2. Metamask 브라우저에서 사이트 접속</del> 완료
+				<del>2. Metamask 브라우저에서 사이트 접속</del>
 			</p>
 			<hr
 				class="my-20 mx-auto border-solid border-black border-1 w-[50px]"
 			/>
-			<p class="mx-auto font-bold">3. Klaytn 네트워크 추가</p>
-			<p class="mt-3">
+			<p class="mb-3 mx-auto text-xl font-bold">
+				3. Klaytn 네트워크 추가
+			</p>
+			<p>
 				아래의 버튼을 클릭해 지갑을 연결 한 후, 한번 더 클릭해
 				네트워크를 추가합니다.
 			</p>
