@@ -101,9 +101,9 @@
 		>
 		<p>위 버튼을 클릭해 링크 복사 후,</p>
 		<p>Metamask 앱 내부 브라우저로 접속합니다.</p>
-		<img class="my-2 mx-auto h-80" src={png1} alt="1" />
-		<img class="my-2 mx-auto h-80" src={png2} alt="2" />
-		<img class="my-2 mx-auto h-80" src={png3} alt="3" />
+		<img class="my-2 mx-auto h-96" src={png1} alt="1" />
+		<img class="my-2 mx-auto h-96" src={png2} alt="2" />
+		<img class="my-2 mx-auto h-96" src={png3} alt="3" />
 
 		<hr class="my-20 mx-auto border-solid border-black border-1 w-[50px]" />
 
