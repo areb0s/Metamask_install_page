@@ -75,59 +75,66 @@
 		</p>
 		<p>아래 단계들을 순차적으로 진행해주세요!</p>
 		<hr class="my-20 mx-auto border-solid border-black border-1 w-[50px]" />
-		<p class="mb-3 mx-auto text-xl font-bold">1. Metamask 지갑 설치</p>
-		<p>모바일 OS에 맞는 버튼을 클릭해 설치해주세요.</p>
-		<div class="my-3 mx-auto">
-			<button
-				class="border-solid border-2 rounded-lg py-5 px-7 mr-5 w-32"
-				on:click={goGooglePlay}>Android</button
-			>
-			<button
-				class="border-solid border-2 rounded-lg py-5 px-7 w-32"
-				on:click={goAppstore}>iOS</button
-			>
-		</div>
-		<p>안내에 따라 새로운 지갑, 혹은 기존 지갑을 추가합니다.</p>
-		<p class="mt-3">
-			시드(Seed) 문구의 분실, 도용으로 인해 <span
-				class="font-bold text-rose-600">자산을 잃을 수 있습니다.</span
-			>
-		</p>
-		<p class="font-bold text-rose-600">
-			꼭 안전한 메모저장 공간에 저장해주세요.
-		</p>
 
-		<hr class="my-20 mx-auto border-solid border-black border-1 w-[50px]" />
-		<p class="mx-auto text-xl font-bold">
-			2. Metamask 브라우저에서 사이트 접속
-		</p>
-		<Clipboard
-			text="https://metamask-install-page.vercel.app/"
-			let:copy
-			on:copy={() => {
-				console.log('복사 완료');
-				alert('링크를 복사하였습니다.');
-			}}
-			><button
-				class="my-3 mx-auto border-solid border-2 rounded-lg py-5 px-7 w-40 text-sky-600"
-				on:click={copy}>링크 복사</button
-			></Clipboard
-		>
-		<p>위 버튼을 클릭해 링크 복사 후,</p>
-		<p>Metamask 앱 내부 브라우저로 접속합니다.</p>
-		<img class="my-2 mx-auto h-96" src={png1} alt="1" />
-		<img class="my-2 mx-auto h-96" src={png2} alt="2" />
-		<img class="my-2 mx-auto h-96" src={png3} alt="3" />
-
-		<hr class="my-20 mx-auto border-solid border-black border-1 w-[50px]" />
-
-		<p class="mx-auto font-bold">3. Klaytn 네트워크 추가</p>
 		{#if !ethereum}
+			<p class="mb-3 mx-auto text-xl font-bold">1. Metamask 지갑 설치</p>
+			<p>모바일 OS에 맞는 버튼을 클릭해 설치해주세요.</p>
+			<div class="my-3 mx-auto">
+				<button
+					class="border-solid border-2 rounded-lg py-5 px-7 mr-5 w-32"
+					on:click={goGooglePlay}>Android</button
+				>
+				<button
+					class="border-solid border-2 rounded-lg py-5 px-7 w-32"
+					on:click={goAppstore}>iOS</button
+				>
+			</div>
+			<p>안내에 따라 새로운 지갑, 혹은 기존 지갑을 추가합니다.</p>
+			<p class="mt-3">
+				시드(Seed) 문구의 분실, 도용으로 인해 <span
+					class="font-bold text-rose-600"
+					>자산을 잃을 수 있습니다.</span
+				>
+			</p>
+			<p class="font-bold text-rose-600">
+				꼭 안전한 메모저장 공간에 저장해주세요.
+			</p>
+
+			<hr
+				class="my-20 mx-auto border-solid border-black border-1 w-[50px]"
+			/>
+			<p class="mx-auto text-xl font-bold">
+				2. Metamask 브라우저에서 사이트 접속
+			</p>
+			<Clipboard
+				text="https://metamask-install-page.vercel.app/"
+				let:copy
+				on:copy={() => {
+					console.log('복사 완료');
+					alert('링크를 복사하였습니다.');
+				}}
+				><button
+					class="my-3 mx-auto border-solid border-2 rounded-lg py-5 px-7 w-40 text-sky-600"
+					on:click={copy}>링크 복사</button
+				></Clipboard
+			>
+			<p>위 버튼을 클릭해 링크 복사 후,</p>
+			<p>Metamask 앱 내부 브라우저로 접속합니다.</p>
+			<img class="my-2 mx-auto h-96" src={png1} alt="1" />
+			<img class="my-2 mx-auto h-96" src={png2} alt="2" />
+			<img class="my-2 mx-auto h-96" src={png3} alt="3" />
+
+			<hr
+				class="my-20 mx-auto border-solid border-black border-1 w-[50px]"
+			/>
+
+			<p class="mx-auto font-bold">3. Klaytn 네트워크 추가</p>
 			<p class="mt-3 text-rose-600">
 				3단계 부터는 Metamask 브라우저에서 진행이 가능합니다
 			</p>
 			<p class="text-rose-600">2단계를 잘 진행했는지 확인해주세요!</p>
 		{:else}
+			<p class="mx-auto font-bold">3. Klaytn 네트워크 추가</p>
 			<p class="mt-3">
 				아래의 버튼을 클릭해 지갑을 연결 한 후, 한번 더 클릭해
 				네트워크를 추가합니다.
