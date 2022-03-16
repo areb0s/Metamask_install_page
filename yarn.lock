@@ -962,6 +962,11 @@ svelte-check@^2.2.7:
     svelte-preprocess "^4.0.0"
     typescript "*"
 
+svelte-clipboard@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/svelte-clipboard/-/svelte-clipboard-1.0.0.tgz#283135e3a288961c98c3d485e89dea060eff35c0"
+  integrity sha512-md6HhnK2byql47mVEzMV2jor3BU465TVDqc0ExYq+pRvzdTn6V+gSDnA2WUDJPxuYUvIhzempPq05BfOMvnOPA==
+
 svelte-hmr@^0.14.9:
   version "0.14.11"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.14.11.tgz#63d532dc9c2c849ab708592f034765fa2502e568"

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Clipboard from 'svelte-clipboard';
+
 	import metamask from './assets/MetaMask_Fox.svg';
 	import png1 from './assets/1.png';
 	import png2 from './assets/2.png';
@@ -45,10 +47,14 @@
 	};
 
 	const goGooglePlay = () => {
-		window.open('https://metamask.app.link/bxwkE8oF99');
+		window.open(
+			'https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&ref=producthunt&_branch_match_id=1030278308777543253&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz00tScxNLM7WSywo0MvJzMvWT6ooz3a1yHeztAQA%2FOIqTSQAAAA%3D'
+		);
 	};
 	const goAppstore = () => {
-		window.open('https://metamask.app.link/skAH3BaF99');
+		window.open(
+			'https://apps.apple.com/us/app/metamask/id1438144202?_branch_match_id=1030278308777543253&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz00tScxNLM7WSywo0MvJzMvWL8529DB2SnSztAQA5G46IyQAAAA%3D'
+		);
 	};
 
 	const copylink = () => {
@@ -95,9 +101,16 @@
 		<p class="mx-auto text-xl font-bold">
 			2. Metamask 브라우저에서 사이트 접속
 		</p>
-		<button
-			class="my-3 mx-auto border-solid border-2 rounded-lg py-5 px-7 w-40 text-sky-600"
-			on:click={copylink}>링크 복사</button
+		<Clipboard
+			text="https://metamask-install-page.vercel.app/"
+			let:copy
+			on:copy={() => {
+				console.log('복사 완료');
+			}}
+			><button
+				class="my-3 mx-auto border-solid border-2 rounded-lg py-5 px-7 w-40 text-sky-600"
+				on:click={copy}>링크 복사</button
+			></Clipboard
 		>
 		<p>위 버튼을 클릭해 링크 복사 후,</p>
 		<p>Metamask 앱 내부 브라우저로 접속합니다.</p>
