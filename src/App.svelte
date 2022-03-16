@@ -109,12 +109,12 @@
 
 		<p class="mx-auto font-bold">3. Klaytn 네트워크 추가</p>
 		{#if !ethereum}
-			<p class="text-rose-600">
+			<p class="mt-3 text-rose-600">
 				3단계 부터는 Metamask 브라우저에서 진행이 가능합니다
 			</p>
 			<p class="text-rose-600">2단계를 잘 진행했는지 확인해주세요!</p>
 		{:else}
-			<button on:click={addKlaytnChain}
+			<button class="mt-3" on:click={addKlaytnChain}
 				>아래의 버튼을 클릭해 지갑을 연결하고, 네트워크를 추가합니다.</button
 			>
 			{#if !walletState}
