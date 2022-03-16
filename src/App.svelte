@@ -106,6 +106,7 @@
 			let:copy
 			on:copy={() => {
 				console.log('복사 완료');
+				alert('링크를 복사하였습니다.');
 			}}
 			><button
 				class="my-3 mx-auto border-solid border-2 rounded-lg py-5 px-7 w-40 text-sky-600"
@@ -127,9 +128,10 @@
 			</p>
 			<p class="text-rose-600">2단계를 잘 진행했는지 확인해주세요!</p>
 		{:else}
-			<button class="mt-3" on:click={addKlaytnChain}
-				>아래의 버튼을 클릭해 지갑을 연결하고, 네트워크를 추가합니다.</button
-			>
+			<p class="mt-3">
+				아래의 버튼을 클릭해 지갑을 연결 한 후, 한번 더 클릭해
+				네트워크를 추가합니다.
+			</p>
 			{#if !walletState}
 				<button
 					class="my-3 mx-auto border-solid border-2 rounded-lg py-5 px-7 w-40"
