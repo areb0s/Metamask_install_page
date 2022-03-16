@@ -57,7 +57,7 @@
 </script>
 
 <TailwindCss />
-<main class="container grid my-16 mx-auto place-content-center">
+<main class="container grid my-0 sm:my-16 mx-auto place-content-center">
 	<div class="grid border-solid border-2 rounded-lg pb-20 p-5 bg-white">
 		<img class="h-52 mx-auto" src={metamask} alt="Metamask Logo" />
 		<p class="mx-auto text-xl font-bold">
