@@ -1,44 +1,11 @@
 <script lang="ts">
-	const params = {
-		chainId: toHex(chain.chainId), // A 0x-prefixed hexadecimal string
-		chainName: chain.name,
-		nativeCurrency: {
-			name: chain.nativeCurrency.name,
-			symbol: chain.nativeCurrency.symbol, // 2-6 characters long
-			decimals: chain.nativeCurrency.decimals,
-		},
-		rpcUrls: chain.rpc,
-		blockExplorerUrls: [
-			chain.explorers &&
-			chain.explorers.length > 0 &&
-			chain.explorers[0].url
-				? chain.explorers[0].url
-				: chain.infoURL,
-		],
-	};
-
-	window.web3.eth.getAccounts((error, accounts) => {
-		window.ethereum
-			.request({
-				method: 'wallet_addEthereumChain',
-				params: [params, accounts[0]],
-			})
-			.then((result) => {
-				console.log(result);
-			})
-			.catch((error) => {
-				stores.emitter.emit(
-					ERROR,
-					error.message ? error.message : error
-				);
-				console.log(error);
-			});
-	});
+	export let onclick;
+	export let addClass;
 </script>
 
-<main>
-	<div>test</div>
-</main>
-
-<style>
-</style>
+<button
+	on:click={onclick}
+	class="my-3 border-solid border-2 rounded-lg py-5 px-7 transition ease-in-out duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-sky-600 hover:text-white {addClass}"
+>
+	<slot />
+</button>
