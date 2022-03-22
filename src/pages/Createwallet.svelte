@@ -245,10 +245,7 @@
 		<br />
 		데스크탑 환경에서 진행하는 방법은 아래 버튼을 클릭해 확인해주세요.
 	</p>
-
 	<Hr />
-
-	<button on:click={() => push('/Createwallet')}>링크 이동</button>
 	{#if !ethereum}
 		<p class="mb-3 text-xl font-bold">1. 지갑 설치</p>
 		<p>사용중인 모바일 OS에 따라 버튼을 클릭해 설치해주세요.</p>
@@ -273,7 +270,7 @@
 		<Hr />
 		<p class="text-xl font-bold">2. Metamask 브라우저에서 사이트 접속</p>
 		<Clipboard
-			text="https://metamask-install-page.vercel.app/"
+			text="https://metamask-install-page.vercel.app/#/Createwallet"
 			let:copy
 			on:copy={() => {
 				alert('링크를 복사하였습니다.');
