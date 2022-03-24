@@ -6,7 +6,7 @@
 	import Home from './pages/Home.svelte';
 	import Createwallet from './pages/Createwallet.svelte';
 	import Exchange from './pages/Exchange.svelte';
-	import Test from './pages/Test.svelte';
+	import Minting from './pages/Minting.svelte';
 
 	import Button from './components/Button.svelte';
 	import Hr from './components/Hr.svelte';
@@ -17,7 +17,7 @@
 		'/': Home,
 		'/Createwallet': Createwallet,
 		'/Exchange': Exchange,
-		'/test': Test,
+		'/Minting': Minting,
 	};
 </script>
 

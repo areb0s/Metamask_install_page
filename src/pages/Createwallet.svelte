@@ -168,6 +168,9 @@
 				아래의 버튼을 클릭해 지갑을 연결 한 후,
 				<br />
 				한번 더 클릭해 네트워크를 추가합니다.
+				<br />
+				버튼을 클릭해도 반응이 없는 경우, 우측 상단의 퍼즐아이콘 -> 메타마스크
+				앱을 확인해주세요.
 			</p>
 			{#if !walletState}
 				<Button addClass="w-40" onclick={connnectWalletButton}
@@ -243,7 +246,6 @@
 		현재 모바일 환경에서는
 		<span class="font-bold">Metamask 지갑</span>만 지원하고 있습니다.
 		<br />
-		데스크탑 환경에서 진행하는 방법은 아래 버튼을 클릭해 확인해주세요.
 	</p>
 	<Hr />
 	{#if !ethereum}
